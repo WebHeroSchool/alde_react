@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Item = () => (
-  <li>Важная задача</li>
+const Item = ({ task }) => (
+  <li>{task}</li>
 );
 
 export default Item;

@@ -9,11 +9,11 @@ const App = () => (
         <h1>Список задач</h1>
         <InputItem />
         <ItemList>
-            <Item/>
-            <Item/>
-            <Item/>
+            <Item task={'Поесть'}/>
+            <Item task={'Покодить'}/>
+            <Item task={'Поспать'}/>
         </ItemList>
-        <Footer />
+        <Footer count={3}/>
     </div>
 );
 
