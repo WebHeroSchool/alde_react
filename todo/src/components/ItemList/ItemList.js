@@ -1,8 +1,11 @@
 import React from 'react';
+import Item from '../Item/Item'
 
-const ItemList = (props) => (
+const ItemList = ({itemList}) => (
   <ul>
-      {props.children}
+      {itemList.map(item => (
+        <Item task={item.value} key={item.value}/>
+      ))}
   </ul>
 );
 
