@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 const ItemList = ({itemList}) => (
   <ul>
       {itemList.map(item => (
-        <Item task={item.value} key={item.value}/>
+        <Item task={item} key={item.value}/>
       ))}
   </ul>
 );

@@ -6,13 +6,16 @@ import styles from './App.module.css';
 
 const itemList = [
   {
-    value: 'Поесть'
+    value: 'Поесть',
+    isDone: true,
   },
   {
-    value: 'Покодить'
+    value: 'Покодить',
+    isDone: true,
   },
   {
-    value: 'Поспать'
+    value: 'Поспать',
+    isDone: false,
   }
 ];
 
