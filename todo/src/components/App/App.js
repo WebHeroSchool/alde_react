@@ -25,7 +25,6 @@ const App = () => (
         <InputItem />
         <ItemList itemList={itemList}/>
         <Footer count={3}/>
-      {console.log(styles)}
     </div>
 );
 
