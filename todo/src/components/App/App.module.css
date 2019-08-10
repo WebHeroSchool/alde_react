@@ -1,9 +1,18 @@
 .wrap {
-  display: block;
+  min-width: 300px;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
-  width: 300px;
+  padding: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 8px;
 }
 
 .title {
+  margin: 0;
+  text-align: center;
   font-family: Roboto;
 }
