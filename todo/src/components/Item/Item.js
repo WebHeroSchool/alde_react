@@ -12,7 +12,7 @@ const Item = ({task}) => (
           [styles.done]: task.isDone,
         })
       }>
-        <p>{task.value}</p>
+        <p className={styles.itemText}>{task.value}</p>
       </div>
       <Clear className={styles.btn} />
     </div>
