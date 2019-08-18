@@ -1,4 +1,26 @@
+
+.itemWrap {
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemText {
+    margin: 0;
+}
+
+.task {
+    font-size: 18px;
+}
+
 .done {
     font-style: italic;
     color: grey;
+    opacity: .5;
+}
+
+.btn {
+    cursor: pointer;
 }
