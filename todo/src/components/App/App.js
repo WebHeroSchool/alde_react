@@ -23,7 +23,7 @@ class App extends Component {
     ],
   };
 
-  setTaskIsDone = (task) => {
+  setTaskIsDone = task => {
     console.log(task.isDone);
   };
 
