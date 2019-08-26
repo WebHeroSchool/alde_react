@@ -23,12 +23,19 @@ class App extends Component {
     ],
   };
 
+  setTaskIsDone = task => {
+    console.log(task.isDone);
+  };
+
   render () {
     return (
       <div className={styles.wrap}>
           <h1 className={styles.title}>Список задач</h1>
           <InputItem />
-          <ItemList itemList={this.state.itemList}/>
+          <ItemList
+              itemList={this.state.itemList}
+              setTaskIsDone={this.setTaskIsDone}
+          />
           <Footer count={3}/>
       </div>
     )
