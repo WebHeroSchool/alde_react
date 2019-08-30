@@ -11,20 +11,30 @@ class App extends Component {
       {
         value: 'Поесть',
         isDone: true,
+        id: 1,
       },
       {
         value: 'Покодить',
         isDone: true,
+        id: 2,
       },
       {
         value: 'Поспать',
         isDone: false,
+        id: 3,
       }
     ],
   };
 
   setTaskIsDone = task => {
-    console.log(task.isDone);
+    const newItemList = this.state.itemList.map(item => {
+      if(item.id === task.id){
+          item.isDone = !item.isDone
+      }
+      return item;
+    })
+
+    this.setState({itemList: newItemList})
   };
 
   render () {

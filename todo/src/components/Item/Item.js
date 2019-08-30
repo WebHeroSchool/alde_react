@@ -8,7 +8,7 @@ const Item = ({task, setTaskIsDone}) => (
       <input
           type='checkbox'
           checked={task.isDone}
-          onClick={() => setTaskIsDone(task)}
+          onChange={() => setTaskIsDone(task)}
       />
       <div className={
         classnames({
