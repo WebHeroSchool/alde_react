@@ -37,6 +37,12 @@ class App extends Component {
     this.setState({itemList: newItemList})
   };
 
+  removeTask = id => {
+    const newTaskList = this.state.itemList.filter(item => item.id !== id);
+
+    this.setState({itemList: newTaskList})
+  };
+
   render () {
     return (
       <div className={styles.wrap}>
@@ -45,6 +51,7 @@ class App extends Component {
           <ItemList
               itemList={this.state.itemList}
               setTaskIsDone={this.setTaskIsDone}
+              removeTask={this.removeTask}
           />
           <Footer count={3}/>
       </div>
