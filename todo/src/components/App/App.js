@@ -34,13 +34,13 @@ class App extends Component {
       return item;
     })
 
-    this.setState({itemList: newItemList})
+    this.setState( { itemList: newItemList } )
   };
 
   removeTask = id => {
     const newTaskList = this.state.itemList.filter(item => item.id !== id);
 
-    this.setState({itemList: newTaskList})
+    this.setState( { itemList: newTaskList } );
   };
 
   render () {
