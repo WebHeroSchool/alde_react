@@ -7,7 +7,7 @@ const ItemList = ({ itemList, setTaskIsDone, removeTask }) => (
     {itemList.map(item => (
       <Item
         task={item}
-        key={item.value}
+        key={item.id}
         setTaskIsDone={setTaskIsDone}
         removeTask={removeTask}
       />
