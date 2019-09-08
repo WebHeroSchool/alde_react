@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import TextField from "@material-ui/core/TextField";
-import styles from "./Input.module.css";
 import classnames from "classnames";
+
+import TextField from "@material-ui/core/TextField";
+
+import styles from "./Input.module.css";
 
 class InputItem extends Component {
   state = {
-    value: ""
+    value: null,
   };
 
   buttonHandler = () => {
     this.props.addTask(this.state.value);
-    this.setState({ value: "" });
+    this.setState({ value: null });
   };
 
   render() {
@@ -21,16 +23,16 @@ class InputItem extends Component {
           label="Добавить задачу"
           margin="dense"
           className={styles.searchInput}
-          value={this.state.value}
+          value={this.state.value || ''}
           onChange={e => this.setState({ value: e.target.value.toUpperCase() })}
         />
         <button
           className={classnames({
-            [styles.addButton]: this.state.value !== "",
-            [styles.disabledButton]: this.state.value === ""
+            [styles.addButton]: this.state.value !== null && this.state.value !== '',
+            [styles.disabledButton]: this.state.value === null || this.state.value === '',
           })}
           onClick={this.buttonHandler}
-          disabled={this.state.value === ""}
+          disabled={this.state.value === null || this.state.value === ''}
         >
           Добавить
         </button>
