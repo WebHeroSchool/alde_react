@@ -17,4 +17,14 @@ const ItemList = ({ itemList, setTaskIsDone, removeTask }) => (
   </div>
 );
 
+ItemList.defaultProps = {
+  itemList: [
+    {
+      value: "Добавь тасочку",
+      isDone: false,
+      id: 0
+    }
+  ]
+};
+
 export default ItemList;
