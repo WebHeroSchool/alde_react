@@ -1,26 +1,26 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import InputItem from "../InputItem/InputItem";
-import ItemList from "../ItemList/ItemList";
-import Footer from "../Footer/Footer";
+import InputItem from '../InputItem/InputItem';
+import ItemList from '../ItemList/ItemList';
+import Footer from '../Footer/Footer';
 
-import styles from "./App.module.css";
+import styles from './App.module.css';
 
 class App extends Component {
   state = {
     itemList: [
       {
-        value: "Поесть",
+        value: 'Поесть',
         isDone: true,
         id: 1
       },
       {
-        value: "Покодить",
+        value: 'Покодить',
         isDone: true,
         id: 2
       },
       {
-        value: "Поспать",
+        value: 'Поспать',
         isDone: false,
         id: 3
       }

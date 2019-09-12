@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Item from "../Item/Item";
+import Item from '../Item/Item';
 
-import styles from "./itemList.module.css";
+import styles from './itemList.module.css';
 
 const ItemList = ({ itemList, setTaskIsDone, removeTask }) => (
   <div className={styles.listWrap}>
@@ -20,7 +20,7 @@ const ItemList = ({ itemList, setTaskIsDone, removeTask }) => (
 ItemList.defaultProps = {
   itemList: [
     {
-      value: "Добавь тасочку",
+      value: 'Добавь тасочку',
       isDone: false,
       id: 0
     }

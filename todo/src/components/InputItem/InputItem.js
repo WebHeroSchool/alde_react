@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import classnames from "classnames";
+import React, { Component } from 'react';
+import classnames from 'classnames';
 
-import TextField from "@material-ui/core/TextField";
+import TextField from '@material-ui/core/TextField';
 
-import styles from "./Input.module.css";
+import styles from './Input.module.css';
 
 class InputItem extends Component {
   state = {
-    value: null,
+    value: null
   };
 
   buttonHandler = () => {
@@ -19,17 +19,19 @@ class InputItem extends Component {
     return (
       <div className={styles.inputWrap}>
         <TextField
-          id="standard-dense"
-          label="Добавить задачу"
-          margin="dense"
+          id='standard-dense'
+          label='Добавить задачу'
+          margin='dense'
           className={styles.searchInput}
           value={this.state.value || ''}
           onChange={e => this.setState({ value: e.target.value.toUpperCase() })}
         />
         <button
           className={classnames({
-            [styles.addButton]: this.state.value !== null && this.state.value !== '',
-            [styles.disabledButton]: this.state.value === null || this.state.value === '',
+            [styles.addButton]:
+              this.state.value !== null && this.state.value !== '',
+            [styles.disabledButton]:
+              this.state.value === null || this.state.value === ''
           })}
           onClick={this.buttonHandler}
           disabled={this.state.value === null || this.state.value === ''}
