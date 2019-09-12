@@ -1,6 +1,8 @@
 import React from "react";
 import classnames from "classnames";
+
 import Clear from "@material-ui/icons/HighlightOff";
+
 import styles from "./Item.module.css";
 
 const Item = ({ task, setTaskIsDone, removeTask }) => (

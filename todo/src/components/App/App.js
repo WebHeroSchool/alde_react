@@ -1,28 +1,31 @@
-import React, { Component } from "react";
-import InputItem from "../InputItem/InputItem";
-import ItemList from "../ItemList/ItemList";
-import Footer from "../Footer/Footer";
-import styles from "./App.module.css";
+import React, { Component } from 'react';
+
+import InputItem from '../InputItem/InputItem';
+import ItemList from '../ItemList/ItemList';
+import Footer from '../Footer/Footer';
+
+import styles from './App.module.css';
 
 class App extends Component {
   state = {
     itemList: [
       {
-        value: "Поесть",
+        value: 'Поесть',
         isDone: true,
         id: 1
       },
       {
-        value: "Покодить",
+        value: 'Покодить',
         isDone: true,
         id: 2
       },
       {
-        value: "Поспать",
+        value: 'Поспать',
         isDone: false,
         id: 3
       }
-    ]
+    ],
+    count: 3
   };
 
   setTaskIsDone = task => {
@@ -42,17 +45,30 @@ class App extends Component {
     this.setState({ itemList: newTaskList });
   };
 
+  addTask = value => {
+    const newTask = {
+      value: value,
+      isDone: false,
+      id: this.state.count + 1
+    };
+
+    this.setState({
+      itemList: [...this.state.itemList, newTask],
+      count: this.state.count + 1
+    });
+  };
+
   render() {
     return (
       <div className={styles.wrap}>
         <h1 className={styles.title}>Список задач</h1>
-        <InputItem />
+        <InputItem addTask={this.addTask} />
         <ItemList
           itemList={this.state.itemList}
           setTaskIsDone={this.setTaskIsDone}
           removeTask={this.removeTask}
         />
-        <Footer count={3} />
+        <Footer count={this.state.count} />
       </div>
     );
   }
