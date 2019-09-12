@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from 'prop-types';
 import classnames from "classnames";
 
 import Clear from "@material-ui/icons/HighlightOff";
@@ -23,5 +24,12 @@ const Item = ({ task, setTaskIsDone, removeTask }) => (
     <Clear className={styles.btn} onClick={() => removeTask(task.id)} />
   </div>
 );
+
+Item.propTypes = {
+  task: propTypes.object,
+  setTaskIsDone: propTypes.func,
+  removeTask: propTypes.func
+}
+
 
 export default Item;
