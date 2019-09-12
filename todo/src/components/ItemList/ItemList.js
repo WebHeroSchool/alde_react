@@ -32,6 +32,6 @@ ItemList.propTypes = {
   itemList: propTypes.array,
   setTaskIsDone: propTypes.func,
   removeTask: propTypes.func
-}
+};
 
 export default ItemList;
