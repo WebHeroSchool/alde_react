@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import Item from '../Item/Item';
 
@@ -25,6 +26,12 @@ ItemList.defaultProps = {
       id: 0
     }
   ]
+};
+
+ItemList.propTypes = {
+  itemList: propTypes.array,
+  setTaskIsDone: propTypes.func,
+  removeTask: propTypes.func
 };
 
 export default ItemList;
