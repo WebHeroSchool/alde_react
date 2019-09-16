@@ -28,6 +28,18 @@ class App extends Component {
     count: 3
   };
 
+  componentDidMount () {
+    console.log('ComponentDidMount');
+  };
+  
+  componentDidUpdate () {
+    console.log('ComponentDidUpdate');
+  };
+
+  componentWillUnmount () {
+    console.log('ComponentWillUnmount');
+  };
+
   setTaskIsDone = task => {
     const newItemList = this.state.itemList.map(item => {
       if (item.id === task.id) {
