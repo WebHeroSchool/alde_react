@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import classname from 'classnames';
 
@@ -16,29 +16,25 @@ class Item extends Component {
   }
 
   render() {
-    const {
-      task,
-      setTaskIsDone,
-      removeTask,
-    } = this.props;
+    const { task, setTaskIsDone, removeTask } = this.props;
     return (
-        <div className={styles.itemWrap}>
-          <input
-              type='checkbox'
-              checked={task.isDone}
-              onChange={() => setTaskIsDone(task)}
-          />
-          <div
-              className={classname({
-                [styles.task]: task,
-                [styles.done]: task.isDone
-              })}
-          >
-            <p className={styles.itemText}>{task.value}</p>
-          </div>
-          <Clear className={styles.btn} onClick={() => removeTask(task.id)}/>
+      <div className={styles.itemWrap}>
+        <input
+          type='checkbox'
+          checked={task.isDone}
+          onChange={() => setTaskIsDone(task)}
+        />
+        <div
+          className={classname({
+            [styles.task]: task,
+            [styles.done]: task.isDone
+          })}
+        >
+          <p className={styles.itemText}>{task.value}</p>
         </div>
-    )
+        <Clear className={styles.btn} onClick={() => removeTask(task.id)} />
+      </div>
+    );
   }
 }
 
