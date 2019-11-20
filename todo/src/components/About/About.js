@@ -6,7 +6,6 @@ import Profile from '../Profile/Profile';
 import Repos from '../Repos/Repos';
 import Loader from '../Loader/Loader';
 
-// const octokit = new Octokit({ auth: 'ea4fb568ef16fc739105bd2e71610fd249083c21' });
 const octokit = new Octokit();
 
 export default class About extends Component {
@@ -17,6 +16,7 @@ export default class About extends Component {
     repList: [],
     error: false
   }
+
   componentDidMount() {
     octokit.repos.listForUser({ username: 'aldeowl' })
       .then(res => {
@@ -37,7 +37,7 @@ export default class About extends Component {
         }
       })
       .catch(e => this.setState({ error: true, loading: false }));
-  }
+  };
 
   render() {
     const { loading, error, repList, user } = this.state;
