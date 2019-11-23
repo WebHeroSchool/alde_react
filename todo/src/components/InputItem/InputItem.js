@@ -22,9 +22,11 @@ class InputItem extends Component {
           id='standard-dense'
           label='Добавить задачу'
           margin='dense'
+          autoComplete='off'
           className={styles.searchInput}
           value={this.state.value || ''}
           onChange={e => this.setState({ value: e.target.value.toUpperCase() })}
+          onFocus={this.props.removeError}
         />
         <button
           className={classnames({

@@ -5,7 +5,7 @@ import Item from '../Item/Item';
 
 import styles from './itemList.module.css';
 
-const ItemList = ({ itemList, setTaskIsDone, removeTask }) => (
+const ItemList = ({ itemList, filter, setTaskIsDone, removeTask }) => (
   <div className={styles.listWrap}>
     {itemList.map(item => (
       <Item

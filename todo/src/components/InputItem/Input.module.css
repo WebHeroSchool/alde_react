@@ -1,6 +1,6 @@
 
 .inputWrap {
-  width: 100%;
+  width: 90%;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
@@ -8,20 +8,21 @@
   align-items: center;
 }
 .searchInput {
-  width: 80%;
+  width: 100%;
   border-bottom: 1px solid red;
 }
 
 .addButton {
-  width: 50%;
-  height: 30px;
-  background-color: aquamarine;
+  align-self: flex-end;
+  width: 150px;
+  height: 35px;
+  background-color: #fff;
   outline: none;
   border: none;
   border-radius: 4px;
   color: gray;
   cursor: pointer;
-  opacity: .8;
+  font-size: 1em;
 }
 
 .addButton:hover {
@@ -29,15 +30,18 @@
 }
 
 .disabledButton {
-  width: 50%;
-  height: 30px;
+  align-self: flex-end;
+  width: 150px;
+  height: 35px;
   outline: none;
   border: none;
   border-radius: 4px;
-  color: gray;
+  color: #313131;
   opacity: .8;
   cursor: default;
-  background-color: lightgray;
+  background-color: transparent;
+  border: 1px solid lightcyan;
+  font-size: 1em;
 }
 
 .error {

@@ -1,41 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styles from './Item.module.css';
 import propTypes from 'prop-types';
 import classname from 'classnames';
 
-import Clear from '@material-ui/icons/HighlightOff';
+import del from '../../images/delete.svg'
 
-import styles from './Item.module.css';
 
-class Item extends Component {
-  componentDidMount() {
-    this.memoryLost = setInterval(() => console.log('memory lost'), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.memoryLost);
-  }
-
-  render() {
-    const { task, setTaskIsDone, removeTask } = this.props;
-    return (
-      <div className={styles.itemWrap}>
+const Item = ({ task, setTaskIsDone, removeTask }) => {
+  return (
+    <div className={styles.itemWrap}>
+      <label className={classname({
+        [styles.label]: task,
+        [styles.label__comp]: task.isDone,
+      })}>
         <input
           type='checkbox'
           checked={task.isDone}
+          className={styles.checkbox}
           onChange={() => setTaskIsDone(task)}
         />
-        <div
-          className={classname({
-            [styles.task]: task,
-            [styles.done]: task.isDone
-          })}
-        >
-          <p className={styles.itemText}>{task.value}</p>
-        </div>
-        <Clear className={styles.btn} onClick={() => removeTask(task.id)} />
+      </label>
+      <div
+        className={classname({
+          [styles.task]: task,
+          [styles.done]: task.isDone
+        })}
+      >
+        <p className={styles.itemText}>{task.value}</p>
       </div>
-    );
-  }
+      <img src={del} alt='удалить' className={styles.btn} onClick={() => removeTask(task.id)} />
+    </div >
+  );
+
 }
 
 Item.propTypes = {

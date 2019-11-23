@@ -6,7 +6,8 @@ import Profile from '../Profile/Profile';
 import Repos from '../Repos/Repos';
 import Loader from '../Loader/Loader';
 
-const octokit = new Octokit();
+// const octokit = new Octokit();
+const octokit = new Octokit({ auth: '36f7ec1b0e3685390911e86c82bf7e1ffc070ebf' });
 
 export default class About extends Component {
 
@@ -56,10 +57,17 @@ export default class About extends Component {
       )
     }
     return <div className={style.wrap}>
-      <Profile avatar={user.avatar_url} name={user.name} login={user.login} />
+      <Profile avatar={user.avatar_url} login={user.login} url={user.html_url} />
       {repList &&
         repList.map(item => (
-          <Repos key={item.id} name={item.name} link={item.html_url} />
+          <Repos
+            key={item.id}
+            name={item.name}
+            link={item.html_url}
+            lang={item.language}
+            create={item.created_at}
+            update={item.pushed_at}
+          />
         ))}
     </div>;
   }

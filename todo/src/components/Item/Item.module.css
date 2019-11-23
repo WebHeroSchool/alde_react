@@ -1,10 +1,58 @@
 
 .itemWrap {
-    width: 100%;
+    width: 90%;
     min-height: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: lightcyan;
+    border-radius: 4px;
+}
+
+.label {
+    flex: 1;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+}
+.label {
+    position: relative;
+    cursor: pointer;
+}
+.label:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background: grey;
+}
+.label:after {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    top: -3px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: 0.2s;
+}
+.label__comp:after {
+    opacity: 1;
+}
+.label__comp:before {
+    background: dodgerblue;
 }
 
 .itemText {
@@ -12,7 +60,10 @@
 }
 
 .task {
+    flex: 10;
+    display: flex;
     font-size: 18px;
+
 }
 
 .done {
@@ -22,5 +73,8 @@
 }
 
 .btn {
+    flex: 1;
+    width: 1.5em;
+    height: 1.5em;
     cursor: pointer;
 }

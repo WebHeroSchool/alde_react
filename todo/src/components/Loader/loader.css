@@ -46,7 +46,7 @@
     left: 20px;
     border-radius: 50%;
     border: 8px solid #000;
-    border-color: aquamarine transparent aquamarine transparent;
+    border-color: dodgerblue transparent dodgerblue transparent;
     animation: lds-double-ring 1.5s linear infinite;
 }
 .lds-double-ring div:nth-child(2) {
@@ -54,7 +54,7 @@
     height: 140px;
     top: 30px;
     left: 30px;
-    border-color: transparent orange transparent orange;
+    border-color: transparent lightcyan transparent lightcyan;
     animation: lds-double-ring_reverse 1.5s linear infinite;
 }
 .lds-double-ring {

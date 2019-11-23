@@ -8,9 +8,9 @@ import {
 
 import Todo from '../Todo/Todo';
 import About from '../About/About';
-import Contacts from '../Contacts/Contacts';
 
 import styles from './App.module.css';
+import logo from '../../images/WebHeroSchool.png';
 
 const App = () => {
   return (
@@ -32,18 +32,13 @@ const App = () => {
           >
             ToDo
           </NavLink>
-          <NavLink
-            to='/contacts'
-            className={styles.link}
-            activeClassName={styles.active__link}
-          >
-            Contacts
-          </NavLink>
+          <a href='https://webheroschool.ru/' target='_blank' rel='noopener noreferrer'>
+            <img src={logo} alt='WebHeroSchool' />
+          </a>
         </div>
         <Switch>
           <Route exact path='/' component={About} />
           <Route path='/todo' component={Todo} />
-          <Route path='/contacts' component={Contacts} />
         </Switch>
       </div>
     </Router>

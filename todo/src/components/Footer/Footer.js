@@ -3,9 +3,10 @@ import propTypes from 'prop-types';
 
 import styles from './Footer.module.css';
 
-const Footer = ({ count }) => (
+const Footer = ({ count, complete }) => (
   <div className={styles.footerWrap}>
-    <p className={styles.text}>Всего задач: {count}</p>
+    <p className={styles.text}>Невыполнено: {count}</p>
+    <p className={styles.text}>Выполнено: {complete}</p>
   </div>
 );
 
