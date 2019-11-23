@@ -6,7 +6,6 @@ import Profile from '../Profile/Profile';
 import Repos from '../Repos/Repos';
 import Loader from '../Loader/Loader';
 
-// const octokit = new Octokit();
 const octokit = new Octokit({ auth: '36f7ec1b0e3685390911e86c82bf7e1ffc070ebf' });
 
 export default class About extends Component {
