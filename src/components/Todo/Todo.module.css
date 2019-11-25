@@ -3,7 +3,6 @@
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   border: 2px solid dodgerblue;
   border-radius: 8px;
@@ -24,6 +23,7 @@
 }
 
 .errors {
+  height: 25px;
   text-align: center;
   font-family: Roboto;
   font-size: 1.1em;

@@ -3,7 +3,7 @@ import styles from './Item.module.css';
 import propTypes from 'prop-types';
 import classname from 'classnames';
 
-import del from '../../images/delete.svg'
+import del from '../../images/del.svg';
 
 
 const Item = ({ task, setTaskIsDone, removeTask }) => {
