@@ -10,7 +10,7 @@ import Todo from '../Todo/Todo';
 import About from '../About/About';
 
 import styles from './App.module.css';
-import logo from '../../images/WebHeroSchool.png';
+import logo from '../../images/webHero.svg';
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ const App = () => {
             ToDo
           </NavLink>
           <a href='https://webheroschool.ru/' target='_blank' rel='noopener noreferrer'>
-            <img src={logo} alt='WebHeroSchool' />
+            <img src={logo} alt='WebHeroSchool' className={styles.logo} />
           </a>
         </div>
         <Switch>

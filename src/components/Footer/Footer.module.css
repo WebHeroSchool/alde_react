@@ -7,13 +7,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 19px;
-    background-color: lightcyan;
+    border-bottom: 2px solid dodgerblue;
 }
 
 .text {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    color: #313131;
+    color: dodgerblue;
 }

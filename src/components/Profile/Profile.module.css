@@ -2,7 +2,7 @@
   width:100%;
   padding: 10px;
   display: flex;
-  border: 2px solid lightcyan;
+  border: 2px solid dodgerblue;
   border-radius: 8px;
   box-sizing: border-box;
 }
@@ -21,7 +21,7 @@
 
 .name {
   font-size: 1.5em;
-  color: lightcyan;
+  color: dodgerblue;
 }
 
 .link {
@@ -38,7 +38,7 @@
 
 .text {
   font-size: 1em;
-  color: lightcyan;
+  color: dodgerblue;
 }
 
 @media (max-width: 600px) {

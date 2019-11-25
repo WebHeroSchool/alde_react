@@ -5,8 +5,9 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid lightcyan;
+  border: 2px solid dodgerblue;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
@@ -19,7 +20,7 @@
   margin: 0;
   text-align: center;
   font-family: Roboto;
-  color: lightcyan;
+  color: dodgerblue;
 }
 
 .errors {
@@ -30,23 +31,23 @@
 }
 
 .filter {
-  width: 100%;
+  width: 90%;
   margin-bottom: 10px;
   display: flex;
-  justify-content: space-around;
 }
 
 .filter__item {
-  height: 30px;
-  background-color: transparent;
+  margin-left: 10px;
+  padding: 5px 10px;
   outline: none;
   border: none;
-  border-radius: 4px;
-  color: #313131;
+  border-radius: 15px;
+  color: #000;
   cursor: pointer;
   font-size: 1em;
-  border: 1px solid lightcyan;
+  border: 1px solid dodgerblue;
 }
 .filter__active {
-  background-color: #fff;
+  background-color: dodgerblue;
+  color: #fff;
 }

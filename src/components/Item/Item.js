@@ -28,7 +28,9 @@ const Item = ({ task, setTaskIsDone, removeTask }) => {
       >
         <p className={styles.itemText}>{task.value}</p>
       </div>
-      <img src={del} alt='удалить' className={styles.btn} onClick={() => removeTask(task.id)} />
+      <button className={styles.btn} onClick={() => removeTask(task.id)} >
+        <img src={del} alt='удалить' className={styles.btn__img} />
+      </button>
     </div >
   );
 

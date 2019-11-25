@@ -10,14 +10,15 @@ class InputItem extends Component {
     value: null
   };
 
-  buttonHandler = () => {
+  buttonHandler = (e) => {
+    e.preventDefault();
     this.props.addTask(this.state.value);
     this.setState({ value: null });
   };
 
   render() {
     return (
-      <div className={styles.inputWrap}>
+      <form className={styles.inputWrap}>
         <TextField
           id='standard-dense'
           label='Добавить задачу'
@@ -29,6 +30,7 @@ class InputItem extends Component {
           onFocus={this.props.removeError}
         />
         <button
+          type='submit'
           className={classnames({
             [styles.addButton]:
               this.state.value !== null && this.state.value !== '',
@@ -40,7 +42,7 @@ class InputItem extends Component {
         >
           Добавить
         </button>
-      </div>
+      </form>
     );
   }
 }
