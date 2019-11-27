@@ -5,7 +5,6 @@ import mail from '../../images/mail.svg';
 import telegram from '../../images/telegram.svg';
 
 
-
 const Profile = ({ avatar, login, url }) => {
   const fullName = 'Алексей Денисов';
   const email = 'alde.owl@gmail.com';

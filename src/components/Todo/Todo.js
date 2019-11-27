@@ -8,6 +8,12 @@ import Footer from '../Footer/Footer';
 
 import styles from './Todo.module.css';
 
+const filterVal = {
+  all: 'all',
+  complete: 'complete',
+  noComplete: 'noComplete'
+}
+
 class Todo extends Component {
   state = {
     filter: 'all'
@@ -18,9 +24,14 @@ class Todo extends Component {
   };
 
   filterList = () => {
-    if (this.state.filter === 'noComplete') return this.props.itemList.filter(item => !item.isDone);
-    if (this.state.filter === 'complete') return this.props.itemList.filter(item => item.isDone);
-    if (this.state.filter === 'all') return this.props.itemList;
+    switch (filterVal[this.state.filter]) {
+      case filterVal.complete:
+        return this.props.itemList.filter(item => item.isDone)
+      case filterVal.noComplete:
+        return this.props.itemList.filter(item => !item.isDone)
+      default:
+        return this.props.itemList;
+    }
   };
 
   render() {
@@ -50,7 +61,7 @@ class Todo extends Component {
               className={classnames({
                 [styles.filter__item]: true,
                 [styles.filter__active]:
-                  this.state.filter === 'all',
+                  this.state.filter === filterVal.all,
               })}
               onClick={() => this.setFilter('all')}
             >
@@ -60,9 +71,9 @@ class Todo extends Component {
               className={classnames({
                 [styles.filter__item]: true,
                 [styles.filter__active]:
-                  this.state.filter === 'noComplete',
+                  this.state.filter === filterVal.noComplete,
               })}
-              onClick={() => this.setFilter('noComplete')}
+              onClick={() => this.setFilter(filterVal.noComplete)}
             >
               Невыполнено
         </button>
@@ -70,9 +81,9 @@ class Todo extends Component {
               className={classnames({
                 [styles.filter__item]: true,
                 [styles.filter__active]:
-                  this.state.filter === 'complete',
+                  this.state.filter === filterVal.complete,
               })}
-              onClick={() => this.setFilter('complete')}
+              onClick={() => this.setFilter(filterVal.complete)}
             >
               Выполнено
         </button>
