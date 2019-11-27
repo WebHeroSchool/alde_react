@@ -1,0 +1,62 @@
+.wrap {
+  width:100%;
+  padding: 10px;
+  display: flex;
+  border: 2px solid dodgerblue;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 1.5em;
+  color: dodgerblue;
+}
+
+.link {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+.link:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  font-size: 1em;
+  color: dodgerblue;
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    width: 15px;
+  }
+  .name {
+    margin: 5px 0;
+    font-size: 1em;
+  }
+
+  .link {
+    font-size: 1em;
+  }
+}

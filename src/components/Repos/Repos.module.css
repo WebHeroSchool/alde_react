@@ -1,0 +1,67 @@
+.wrap {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid dodgerblue;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.wrap:hover{
+  background-color: dodgerblue;
+}
+
+.wrap:hover .name{
+  color: #fff;
+}
+
+.wrap:hover .desc{
+  color: #fff;
+}
+
+.name {
+  margin: 0 0 8px 0;
+  color: dodgerblue;
+  font-size: 1.2em;
+}
+
+.desc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: dodgerblue;
+  font-size: 1em;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.circle__js {
+  background-color: yellow;
+}
+
+.circle__html {
+  background-color: tomato;
+}
+
+.circle__css {
+  background-color: blue;
+}
+
+.desc__text {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,15 @@
+.wrap {
+  width: 50%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
